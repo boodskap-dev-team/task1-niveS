@@ -37,6 +37,8 @@ table.dataTable{
       pointer-events: none;
       color: #aaa;
       padding-left: 270px;
+      right: 25px;
+    top: -5px;
      }
      .profile-icon {
         width: 25px;
@@ -218,3 +220,41 @@ table.dataTable{
         right: 15px;
         top: 14px;
       }
+
+    .profile-style{
+      padding: 10px;
+      font-size: 13px;
+      display: inline-block;
+      border-radius: 60px;
+      box-shadow: 0px 0px 2px #88888821;
+      color: #ffffff85;
+      background: #88888821;
+    }
+  .image{
+    border-radius: 100%;
+    margin-top: 30px;
+    /* margin-left: 70px; */
+    /* margin-left: 35%; */
+    text-align: center;
+    height: 50px;
+    padding: 3px;
+    border: 1px solid #cccccc7a;
+    width: 50px;
+  }
+
+  .leftmenu {
+    background-color: #272D47;
+  }
+
+
+
+  .card-text {
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+
+  .card-statistics {
+    border: none;
+    border-left: 4px;
+    border-radius: 6px;
+  }

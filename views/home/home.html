@@ -1,124 +1,557 @@
-<style>
-   body{
-    background-color: #141527;
-}
-/* .card-statistics{
-    border: none;
-    border-left: 4px;
-    border-radius: 6px;
-} */
- .card-title{
-    text-transform: capitalize;
-    font-size: 0.75em;
-    padding-top: 10px;
-    margin-bottom: .2rem;
-    
-}
- .card-text{
-    font-size: 1.5em;
-    font-weight: 600;
-}
-.card-body ,.navbar,.leftmenu
-{
-    background-color:#272D47;
-}
-
-</style>
-
-
-
 <div class="container-fluid">
   <div class="row">
-    <div class="page-title col-7 pt-0">
-        <h4 class="text-white">Hi!!Welcome Back</h4>
-        <p class="text-white">Home <span style="color:blueviolet">>> Sales Dashboard</span></p>
-    </div class="col-4">
-   <span class="pr-3"> <button style="background-color:blue ;" class="rounded text-white"><i class="fa fa-cog" aria-hidden="true"></i>General Setting</button></span>
-    <span class="pr-3"><button style="background-color:red;" class="rounded text-white"><i class="fa fa-commenting-o" aria-hidden="true"></i>Print</button></span>
- <span><button style="background-color:orange ;"class="rounded text-white"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      Buy Now</button></span>
+    <div class="page-title col-md-7 pt-0">
+      <h4 class="text-white">Hi!!Welcome Back</h4>
+      <p class="text-white">Home <span style="color:blueviolet">>> Sales Dashboard</span></p>
+    </div>
+    <div class="col-md-5 pt-0 text-right">
+
+      <button type="button" class="btn btn-primary"><i class="fa fa-cog mr-1" aria-hidden="true"></i>General
+        Settings</button>
+      <button type="button" class="btn btn-danger"><i class="fa fa-print mr-1" aria-hidden="true"></i>print</button>
+      <button type="button" class="btn btn-warning"><i class="fa fa-shopping-cart mr-1" aria-hidden="true"></i>Shop
+        now</button>
+    </div>
+
+
+
+
   </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card card-statistics">
-                        <div class="card-body rounded p-0">
-                          <div class="p-3">
-                          <h5 class="card-title text-white">Total Sales</h5>
-                          <p class="card-text text-white">$3,257</p>
-                          </div>
-                          <div id="chart1" style="width:100%;height: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-statistics">
-                        <div class="card-body rounded p-0">
-                          <div class="p-3">
-                          <h5 class="card-title text-white">Total User</h5>
-                          <p class="card-text text-white">$1,678</p>
-                        </div>
-                          <div id="chart2" style="width:100%;height: 50px;"></div>
-                         
-                    
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-3">
-                    <div class="card card-statistics">
-                        <div class="card-body rounded p-0">
-                          <div class="p-3">
-                          <h5 class="card-title text-white">Total Income</h5>
-                          <p class="card-text text-white">$2,590</p>
-                        </div>
-                          <div id="chart3" style="width:100%;height: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-statistics">
-                        <div class="card-body rounded p-0">
-                          <div class="p-3">
-                          <h5 class="card-title text-white">Total Tax</h5>
-                          <p class="card-text text-white">$1,954</p>
-                          </div>
-                          <div id="chart4" style="width:100%;height: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       
-            <div class="row chart-margin">
-              <div class="col-8">
-                 <div>
-                    <div class="card card-statistics">
-                      <div class="card-body rounded">
-                        <h5 class="card-title text-white">Total Sales</h5>
-                        <!-- <div class="row">
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="card card-statistics">
+        <div class="card-body rounded p-0">
+          <div class="p-3">
+            <h5 class="card-title text-white">Total Sales</h5>
+            <p class="card-text text-white">$3,257</p>
+          </div>
+          <div id="chart1" style="width:100%;height: 50px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card card-statistics">
+        <div class="card-body rounded p-0">
+          <div class="p-3">
+            <h5 class="card-title text-white">Total User</h5>
+            <p class="card-text text-white">$1,678</p>
+          </div>
+          <div id="chart2" style="width:100%;height: 50px;"></div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card card-statistics ">
+        <div class="card-body rounded p-0">
+          <div class="p-3">
+            <h5 class="card-title text-white">Total Income</h5>
+            <p class="card-text text-white">$2,590</p>
+          </div>
+          <div id="chart3" style="width:100%;height: 50px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card card-statistics">
+        <div class="card-body rounded p-0">
+          <div class="p-3">
+            <h5 class="card-title text-white">Total Tax</h5>
+            <p class="card-text text-white">$1,954</p>
+          </div>
+          <div id="chart4" style="width:100%;height: 50px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row chart-margin">
+    <div class="col-md-8">
+
+      <div>
+        <div class="card card-statistics">
+          <div class="card-header text-white"><b>Sales Analysis</b><span><i
+                class="fa fa-ellipsis-h float-right fa-rounded" aria-hidden="true"></i></span></div>
+          <div class="card-body rounded">
+            <h5 class="card-title text-white">Total Sales</h5>
+            <!-- <div class="row">
                              <div></div>
                         </div> -->
-                        <div id="chart5" style="width:100%;height: 300px;"></div>
-                      </div>
-                  </div>
+            <div id="chart5" style="width:100%;height: 300px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="card card-statistics ">
+        <div class="card-header text-white"><b>Recent Activity</b><span><i
+              class="fa fa-ellipsis-h float-right fa-rounded" aria-hidden="true"></i></span></div>
+        <div class="card-body rounded timeline-padding timeline-height">
+
+
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css">
+          <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <!------ Include the above in your HEAD tag ---------->
+
+          <div class="p-1">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <ul class="timeline p-0">
+                  <li class="hide-circle">
+
+                    <p><span class="timeline-style text-primary">Joseph Ellison</span><span
+                        class="theme-color timeline-style"> finished task on</span><span
+                        class="text-white timeline-font"> Project Management</span></p>
+                  </li>
+                  <li class="circle-skyblue">
+                    <a target="_blank" href="https://www.totoprayogo.com/#" class="text-white font-13">New Comment</a>
+                    <a href="#" class="float-right theme-color timeline-style">21 March, 2014</a>
+                    <p><span class="timeline-style text-primary">Elizabeth Scott</span><span
+                        class="theme-color timeline-style"> Product Delivered</span><span
+                        class="text-white timeline-font"> Service Management</span></p>
+                  </li>
+                  <li class="circle-palevioletred">
+                    <a href="#" class="text-white font-13">Target Completed</a>
+                    <a href="#" class="float-right theme-color timeline-style">4 March, 2014</a>
+                    <p><span class="timeline-style text-primary">Sonia Peters</span><span
+                        class="theme-color timeline-style"> finished target on</span><span
+                        class="text-white timeline-font"> this month Sales</span></p>
+                  </li>
+                  <li class="circle-orange">
+                    <a href="#" class="text-white font-13">Revenue Sources</a>
+                    <a href="#" class="float-right theme-color timeline-style">1 April, 2014</a>
+                    <p><span class="timeline-style text-primary">Justin Nash</span><span
+                        class="theme-color timeline-style"> source report on</span><span
+                        class="text-white timeline-font"> Generated</span></p>
+                  </li>
+                  <li class="circle-aqua">
+                    <a href="#" class="text-white font-13">Dispatched Order</a>
+                    <a href="#" class="float-right theme-color timeline-style">1 April, 2014</a>
+                    <p><span class="timeline-style text-primary">Ella lambert</span><span
+                        class="theme-color timeline-style"> ontime order Delivery</span><span
+                        class="text-white timeline-font"> Service Management</span></p>
+                  </li>
+                  <li class="circle-purple">
+                    <a href="#" class="text-white font-13">New User Added</a>
+                    <a href="#" class="float-right theme-color timeline-style">1 April, 2014</a>
+                    <p><span class="timeline-style text-primary">Nicola Blake</span><span
+                        class="theme-color timeline-style"> visited the site</span><span
+                        class="text-white timeline-font"> Membership allocated</span></p>
+                  </li>
+                  <li class="circle-blue">
+                    <a href="#" class="text-white font-13">New User Added</a>
+                  </li>
+                </ul>
               </div>
             </div>
-              <div class="col-4">
-                  <div class="card card-statistics">
-                      <div class="card-body rounded">
-                        <h5 class="card-title text-white">Total User</h5>
-                        <p class="card-text text-white">$1,678</p>
-                                                            
-                      </div>
-                  </div>
-              </div>
-                                      
           </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =================================================================================== -->
+  <!-- profile pic -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card card-statistics">
+        <div class="card-header text-white"><b>Recent Customers</b><span><i
+              class="fa fa-ellipsis-h float-right fa-rounded" aria-hidden="true"></i></span></div>
+        <div class="card-body rounded p-0">
+          <div class="p-2 ml-3 profile-orange bg-blue mr-3 mb-2 mt-3">
+
+            <div class="row no-gutters">
+              <span class="col-md-2">
+                <img class="profile-image" src="images/profile.jpeg">
+              </span>
+              <span class="col-md-8">
+                <span class="text-white font-12 ">Lisa Marshall</span><br>
+                <span class="theme-color font-12">User ID: 46768798</span>
+                <span class="col-md-2 bg-green font-12"><b> Paid</b></span>
+              </span>
+              <span class="col-md-2 text-white pt-2 font-13"><b>$543</b></span>
+            </div>
+
+          </div>
+          <div class="p-2 ml-3 profile-blue bg-blue mr-3 mb-2">
+            <div class="row no-gutters">
+              <span class="col-md-2">
+                <img class="profile-image" src="images/profile.jpeg">
+              </span>
+              <span class="col-md-8">
+                <span class="text-white font-12 ">Lisa Marshall</span><br>
+                <span class="theme-color font-12">User ID: 46768798</span>
+                <span class="col-md-2 bg-red font-12"><b> Pending</b></span>
+              </span>
+              <span class="col-md-2 text-white pt-2 font-13"><b>$543</b></span>
+            </div>
+          </div>
+          <div class="p-2 ml-3 profile-red bg-blue mr-3 mb-2">
+            <div class="row no-gutters">
+              <span class="col-md-2">
+                <img class="profile-image" src="images/profile.jpeg">
+              </span>
+              <span class="col-md-8">
+                <span class="text-white font-12 ">Lisa Marshall</span><br>
+                <span class="theme-color font-12">User ID: 46768798</span>
+                <span class="col-md-2 bg-green font-12"><b> Paid</b></span>
+              </span>
+              <span class="col-md-2 text-white pt-2 font-13"><b>$543</b></span>
+            </div>
+          </div>
+          <div class="p-2 ml-3 profile-aqua bg-blue mr-3 mb-2">
+            <div class="row no-gutters">
+              <span class="col-md-2">
+                <img class="profile-image" src="images/profile.jpeg">
+              </span>
+              <span class="col-md-8">
+                <span class="text-white font-12 ">Lisa Marshall</span><br>
+                <span class="theme-color font-12">User ID: 46768798</span>
+                <span class="col-md-2 bg-red font-12"><b> Pending</b></span>
+              </span>
+              <span class="col-md-2 text-white pt-2 font-13"><b>$543</b></span>
+            </div>
+          </div>
+          <div class="p-2 ml-3 profile-blueviolet bg-blue mr-3 mb-3">
+            <div class="row no-gutters">
+              <span class="col-md-2">
+                <img class="profile-image" src="images/profile.jpeg">
+              </span>
+              <span class="col-md-8">
+                <span class="text-white font-12 ">Lisa Marshall</span><br>
+                <span class="theme-color font-12">User ID: 46768798</span>
+                <span class="col-md-2 bg-green font-12"><b> Paid</b></span>
+              </span>
+              <span class="col-md-2 text-white pt-2 font-13"><b>$543</b></span>
+            </div>
+          </div>
+
+          <!-- <div id="chart1" style="width:100%;height: 50px;"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================== -->
+    <!-- progress bar -->
+    <div class="col-md-4">
+      <div class="card-header text-white font-13"><b>Revenue By Customers in Countries</b><span><i
+            class="fa fa-ellipsis-h float-right fa-rounded" aria-hidden="true"></i></span></div>
+      <div class="card card-statistics">
+        <div class="card-body rounded p-0">
+          <!-- ==================== INDIA ============================= -->
+          <div class="progress-style">
+            <div><span><img src="images/india.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2 pt-2">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-deeppink" role="progressbar" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100" style="width:50%;height:7px">
+                  </div>
+                </div>
+              </span>
+
+            </div>
+          </div>
+          <!-- =================================== RUSSIA ====================================== -->
+          <div class="progress-style">
+            <div><span><img src="images/russia.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2 pt-2">
+                <div class="progress">
+                  <div class="progress-bar  progress-bar-striped bg-violet" role="progressbar" aria-valuenow="30"
+                    aria-valuemin="0" aria-valuemax="100" style="width:100%;height:7px">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- ========================= GERMANY ============================================ -->
+          <div class="progress-style">
+
+            <div><span><img src="images/germany.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2 pt-2">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-greens" role="progressbar" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100" style="width:75%;height:7px">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- ================================= BRAZIL =============================================== -->
+          <div class="progress-style">
+
+            <div><span><img src="images/brazil.jpeg" style="width:10%;height:8%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2 pt-2">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-reds" role="progressbar" aria-valuenow="90"
+                    aria-valuemin="0" aria-valuemax="100" style="width:90%;height:7px">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- =============================== AUSTRALIA ====================================================== -->
+          <div class="progress-style">
+
+            <div><span><img src="images/australia.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2 pt-2">
+                <div class="progress ">
+                  <div class="progress-bar  progress-bar-striped bg-aqua" role="progressbar" aria-valuenow="20"
+                    aria-valuemin="0" aria-valuemax="100" style="width:20%;height:7px">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- ========================== CANADA ==================================================== -->
+          <div class="progress-style">
+            <div><span><img src="images/canada.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-12 pb-2">
+                <div class="progress ">
+                  <div class="progress-bar progress-bar-striped bg-deepviolet" role="progressbar" aria-valuenow="65"
+                    aria-valuemin="0" aria-valuemax="100" style="width:65%;height:7px">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- ================================= UNITED STATES =============================================== -->
+          <div class="progress-style">
+
+            <div><span><img src="images/united-states.png" style="width:10%;height:10%"></span>
+              <span class="float-right card-text2 font-12">
+                <span class="bg-green">dyg</span><span class="text-white"> $23,678</span><span class="theme-color">
+                  (55%)</span></span>
+              </span>
+            </div>
+
+            <div class="row ">
+              <span class="col-md-12 pb-3 ">
+                <div class="progress ">
+                  <div class="progress-bar  progress-bar-striped  bg-yellow " role="progressbar" aria-valuenow="35"
+                    aria-valuemin="0" aria-valuemax="100" style="width:35%;height:7px;">
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <!-- <div id="chart1" style="width:100%;height: 50px;"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================== cards ================================================ -->
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="card card-statistics">
+            <div class="card-body rounded p-0">
+              <div class="row pl-3 pr-3 pb-0 pt-3">
+
+                <span class="col-md-8">
+                  <h5 class="card-title text-white">Users</h5>
+                  <p><span class="text-white">3,257 </span>
+                    <span class="bg-red font-12"><span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                      <span>3,257</span></span>
+                    <span class="theme-color font-12">this month</span>
+                  </p>
+                </span>
+
+                <span class="col-md-4">
+                  <i class="fa fa-users icon-violet icon-circle" aria-hidden="true"></i>
+                </span>
+              </div>
+
+              <div class="ml-3 mr-3 pb-2 font-12">
+                <span class="theme-color">Last month</span>
+                <span class="bg-green"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                <span class="text-white"> 10,678</span>
+                <span class="float-right">
+                  <span class="theme-color"> Last year</span>
+                  <span class="bg-red"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                  <span class="text-white"> 10,234</span>
+                </span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="card card-statistics">
+            <div class="card-body rounded p-0">
+              <div class="row pl-3 pr-3 pb-0 pt-3">
+
+                <span class="col-md-8">
+                  <h5 class="card-title text-white ">Sales</h5>
+                  <p><span class="text-white">3,257 </span>
+                    <span class="bg-green font-12"><span><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                      <span>3,257</span></span>
+                    <span class="theme-color font-12">this month</span>
+                  </p>
+                </span>
+
+                <span class="col-md-4">
+                  <i class="fa fa-usd icon-pink icon-circle" aria-hidden="true"></i>
+                </span>
+              </div>
+
+              <div class="ml-3 mr-3 pb-2 font-12">
+                <span class="theme-color">Last month</span>
+                <span class="bg-green"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                <span class="text-white"> 10,678</span>
+                <span class="float-right">
+                  <span class="theme-color"> Last year</span>
+                  <span class="bg-red"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                  <span class="text-white"> 10,234</span>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="card card-statistics">
+            <div class="card-body rounded p-0">
+              <div class="row pl-3 pr-3 pb-0 pt-3">
+
+                <span class="col-md-8">
+                  <h5 class="card-title text-white">Subscribers</h5>
+                  <p><span class="text-white">3,257 </span>
+                    <span class="bg-green font-12"><span><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                      <span>3,257</span></span>
+                    <span class="theme-color font-12">this month</span>
+                  </p>
+                </span>
+
+                <span class="col-md-4">
+                  <i class="fa fa-thumbs-o-up icon-blue icon-circle" aria-hidden="true"></i>
+                </span>
+              </div>
+
+              <div class="ml-3 mr-3 pb-2 font-12">
+                <span class="theme-color">Last month</span>
+                <span class="bg-green"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                <span class="text-white"> 10,678</span>
+                <span class="float-right">
+                  <span class="theme-color"> Last year</span>
+                  <span class="bg-red"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                  <span class="text-white"> 10,234</span>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================================================= -->
+  </div>
+  <!-- ==================== tables ========================================== -->
+
+
+  <div class="col-md-12 p-0">
+    <div class="card card-statistics">
+
+      <div class="card-header text-white font-13 font-600"><b>Top Product Sales Overview</b><span><i
+        class="fa fa-ellipsis-h float-right fa-rounded" aria-hidden="true"></i></span></div>
+
      
-  
-<!-- =================================================================================== -->
-  
+      <div class="card-body rounded p-0">
+        <div class="m-3">
+          <div class="table-responsive-md">
+            <table class="table table-hover text-white border-color">
+              <thead>
+                <tr>
+                  <th scope="col" class="font-10 font-600">PRODUCT</th>
+                  <th scope="col" class="font-10 font-600">SOLD</th>
+                  <th scope="col" class="font-10 font-600">RECORD POINT</th>
+                  <th scope="col" class="font-10 font-600">STOCK</th>
+                  <th scope="col" class="font-10 font-600">AMOUNT</th>
+                  <th scope="col" class="font-10 font-600">STOCK STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="font-12">
+                  <!-- <th scope="row"></th> -->
+                  <td><img class="icon-image" src="images/book.png"> New Book</td>
+                  <td><i class="fa fa-pause icon-bg1" aria-hidden="true"></i></td>
+                  <td>05</td>
+                  <td>677</td>
+                  <td>$ 6576</td>
+                  <td><span><i class="fa fa-check bg-green" aria-hidden="true"></i></span>In Stock</td>
+
+                </tr>
+                <tr class="font-12">
+                  <!-- <th scope="row"></th> -->
+                  <td><img class="icon-image" src="images/bowl.png"> New Bowl</td>
+                  <td><i class="fa fa-pause icon-bg2" aria-hidden="true"></i></td>
+                  <td>05</td>
+                  <td>677</td>
+                  <td>$ 6576</td>
+                  <td><span><i class="fa fa-check bg-green" aria-hidden="true"></i></span> Stock</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
   <!-- ================================================================================ -->
-   
 </div>
+
 <script src="/js/echart-dashboard.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+

@@ -4,7 +4,8 @@ $(document).ready(function () {
     loadUserChart(),
         loadIncomeChart(),
         loadTaxChart(),
-        loadSalesAnalysis()
+        loadSalesAnalysis(),
+        toggleIcon()
 
 })
 function loadSalesChart() {
@@ -976,4 +977,22 @@ function loadSalesAnalysis() {
     AnalysisChart.setOption(option);
 
 };
+
+// function openNav()
+// {
+//     var a = document.getElementById("#leftmenu");
+//     var b = document.getElementById("body");
+//     if(x.display===block){
+//         a.
+//     }
+// else{}
+    
+// }
+    
+function toggleSlider(){
+    document.getElementById("leftmenu").classList.toggle("active");
+}
+
+
+
 
